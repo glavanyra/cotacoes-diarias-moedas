@@ -6,6 +6,11 @@ def executar_pipeline():
     # 1. Extração
     print("Extraindo dados...")
     dados = buscar_cotacao()
+
+    # Adicinar verificação ("filtro" de segurança)
+    if dados is None:
+        print("Pipeline encerrado: Não foi possível obter dados da API.")
+        return
     
     # 2. Transformação
     print("Transformando dados...")
