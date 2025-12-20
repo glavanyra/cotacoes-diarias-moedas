@@ -1,0 +1,23 @@
+# Ambientes Virtuais (Nunca suba a pasta venv!)
+venv/
+env/
+.env
+
+# Python (Arquivos temporários de compilação)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Dados (Não subimos dados brutos ou processados para o Git)
+data/*.parquet
+data/*.csv
+data/*.json
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Chaves de API e Segredos
+kaggle.json
+.kaggle/
