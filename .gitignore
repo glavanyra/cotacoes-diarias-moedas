@@ -2,6 +2,7 @@
 venv/
 env/
 .env
+.vscode/
 
 # Python (Arquivos temporários de compilação)
 __pycache__/
