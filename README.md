@@ -7,7 +7,7 @@ Este projeto automatiza a extração, transformação e carga (ETL) de cotaçõe
 - **Transformação**: Limpeza e normalização dos dados com Pandas.
 - **Carga Local**: Acumula o histórico de cotações num ficheiro `.parquet` de alto desempenho.
 - **Integração Kaggle**: Sincroniza a base de dados acumulada com o Kaggle através da Kaggle API.
-- **Link do Dataset no Kaggle"**, (https://www.kaggle.com/datasets/vanessaysla/cotacoes-diarias-moedas)
+- **Link do Dataset no Kaggle"** (https://www.kaggle.com/datasets/vanessaysla/cotacoes-diarias-moedas)
 
 ## 🛠️ Tecnologias Utilizadas
 - **Python 3.12+**
