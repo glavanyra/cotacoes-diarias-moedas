@@ -32,6 +32,9 @@ def salvar_parquet(df_novo, caminho="data/cotacoes.parquet"):
 
 
 def upload_to_kaggle():
+    # Estas linhas permitem que o script use os Secrets do GitHub
+    os.environ['KAGGLE_USERNAME'] = os.getenv('KAGGLE_USERNAME')
+    os.environ['KAGGLE_KEY'] = os.getenv('KAGGLE_KEY')
     """
     dataset_id: seu_usuario/nome-do-dataset
     file_path: caminho para o seu arquivo .parquet ou .csv

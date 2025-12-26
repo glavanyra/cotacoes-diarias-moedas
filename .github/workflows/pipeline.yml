@@ -6,13 +6,16 @@ on:
     - cron: '0 21 * * 1-5'
   workflow_dispatch: # Permite que você rode manualmente clicando num botão
 
+permissions:
+  contents: write
+
 jobs:
   run-etl:
     runs-on: ubuntu-latest
     
     steps:
       - name: Baixar código do repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -29,3 +32,12 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: python main.py
+
+      - name: Salvar histórico no Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/cotacoes.parquet
+          git commit -m "chore: atualizando base histórica [skip ci]" || echo "Sem novos dados"
+          git push
+
