@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/cotacoes.parquet
-          git commit -m "chore: atualizando base histórica [skip ci]" || echo "Sem novos dados"
+          git add .
+          git commit -m "chore: atualizando base histórica [skip ci]" || echo "Sem novos dados para commitar"
           git push
 
